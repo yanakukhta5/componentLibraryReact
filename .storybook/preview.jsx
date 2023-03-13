@@ -1,12 +1,9 @@
-// .storybook/preview.js
-
-import { ThemeProvider } from "@emotion/react"
-import { theme } from '../src/theme'
+import { KubThemeProvider } from '@/KubThemeProvider'
 
 export const decorators = [
   (Story) => (
-    <ThemeProvider theme={theme}>
+    <KubThemeProvider>
       <Story />
-    </ThemeProvider>
-  ),
+    </KubThemeProvider>
+  )
 ]

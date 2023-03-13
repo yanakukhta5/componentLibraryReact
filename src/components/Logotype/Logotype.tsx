@@ -8,6 +8,8 @@ import {
   LogotypeImage
 } from './styles'
 
+import { KubThemeProvider } from '@/KubThemeProvider'
+
 export const defaultProps: LogotypeProps = {
   withText: true,
   size: 'lg'
@@ -16,6 +18,7 @@ export const defaultProps: LogotypeProps = {
 export const Logotype: FC<LogotypeProps> = memo(
   forwardRef<HTMLDivElement, LogotypeProps>((props, ref) => {
     return (
+      <KubThemeProvider>
       <Wrapper {...props} ref={ref}>
         <LogotypeImage
           className="cui-logotype__img"
@@ -31,6 +34,7 @@ export const Logotype: FC<LogotypeProps> = memo(
           </LogotypeSubitle>
         </div>
       </Wrapper>
+      </KubThemeProvider>
     )
   })
 )

@@ -1,3 +1,4 @@
-import { Logotype } from './components/Logotype'
+import { Logotype } from '@/components/Logotype'
+import { KubThemeProvider } from '@/KubThemeProvider'
 
-export { Logotype }
+export { Logotype, KubThemeProvider }
