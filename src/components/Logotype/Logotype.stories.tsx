@@ -1,8 +1,6 @@
-import React from 'react'
-
-import { Logotype } from './Logotype'
+import { Logotype } from './'
 import { LogotypeProps } from './types'
-import { sizes } from './styles'
+import { sizes } from './style'
 
 export default {
   title: 'Logotype',
@@ -23,13 +21,11 @@ export default {
   }
 }
 
-export const Default = ({ size, withText }: LogotypeProps) => <Logotype size={size} withText={withText} />
-
-Default.story = {
-  name: 'default'
-}
+export const Default = ({ size, withText }: LogotypeProps) => (
+  <Logotype size={size} withText={withText} />
+)
 
 Default.args = {
   size: 'lg',
-  withText: false 
+  withText: false
 }

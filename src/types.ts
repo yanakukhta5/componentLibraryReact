@@ -9,7 +9,10 @@ export type BaseProps = {
   [key: string]: any // maybe delete
 }
 
-export const Sizes = ['sm', 'md', 'lg', 'x', 'xs'] as const
+export const sizes = ['xs', 'sm', 'md', 'lg', 'xl', 'xxl'] as const
 
-export type TSize = typeof Sizes[number]
+export const colors = ['primary', 'secondary', 'tertiary', 'serface', 'darkest', 'additional', 'peripheral', 'subordinate', 'backup', 'lightest', 'error', 'success', 'warning'] as const
 
+export type TSize = typeof sizes[number]
+
+export type TColor = typeof colors[number]

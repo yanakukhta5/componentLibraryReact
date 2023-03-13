@@ -17,5 +17,13 @@ export const theme = {
   fonts: {
     primary: '#0A73EB',
     secondary: '#5E6873'
+  },
+  fontSizes: {
+    xs: '14px',
+    sm: '16px',
+    md: '20px',
+    lg: '32px',
+    xl: '40px',
+    xxl: '45px'
   }
 }
