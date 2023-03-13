@@ -1,10 +1,16 @@
-import React, { FC, forwardRef, memo } from 'react'
+import { FC, forwardRef, memo } from 'react'
+
 import { LogotypeProps } from './types'
-import { Wrapper, LogotypeTitle, LogotypeSubitle, LogotypeImage } from './styles'
+import {
+  Wrapper,
+  LogotypeTitle,
+  LogotypeSubitle,
+  LogotypeImage
+} from './styles'
 
 export const defaultProps: LogotypeProps = {
   withText: true,
-  size: 'lg',
+  size: 'lg'
 }
 
 export const Logotype: FC<LogotypeProps> = memo(
@@ -27,7 +33,7 @@ export const Logotype: FC<LogotypeProps> = memo(
       </Wrapper>
     )
   })
-) 
+)
 
 Logotype.defaultProps = {
   ...defaultProps
