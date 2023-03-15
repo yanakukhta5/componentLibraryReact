@@ -10,6 +10,12 @@ export default {
       include: Object.keys(defautPropsImage)
     }
   },
+  argTypes: {
+    size: {
+      options: Object.values(sizes),
+      control: { type: 'select' }
+    }
+  }
 }
 
 export const Default = ( props : ImageProps) => (

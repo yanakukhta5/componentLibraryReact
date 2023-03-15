@@ -13,10 +13,7 @@ export default {
   argTypes: {
     size: {
       options: Object.keys(sizes),
-      control: { type: 'radio' }
-    },
-    withText: {
-      control: { type: 'boolean' }
+      control: { type: 'select' }
     }
   }
 }

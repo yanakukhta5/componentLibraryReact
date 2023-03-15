@@ -13,11 +13,7 @@ export default {
   argTypes: {
     size: {
       options: Object.values(sizes),
-      control: { type: 'radio' }
-    },
-    color: {
-      options: Object.values(colors),
-      control: { type: 'radio' }
+      control: { type: 'select' }
     }
   }
 }
