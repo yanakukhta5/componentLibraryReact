@@ -1,4 +1,4 @@
-import { Logotype } from './'
+import { Logotype, defaultProps } from './'
 import { LogotypeProps } from './types'
 import { sizes } from './style'
 
@@ -26,6 +26,5 @@ export const Default = ({ size, withText }: LogotypeProps) => (
 )
 
 Default.args = {
-  size: 'lg',
-  withText: false
+  ...defaultProps
 }

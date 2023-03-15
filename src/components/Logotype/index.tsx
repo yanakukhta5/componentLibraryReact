@@ -11,7 +11,7 @@ import {
 import { KubThemeProvider } from '@/KubThemeProvider'
 
 export const defaultProps: LogotypeProps = {
-  withText: true,
+  withText: false,
   size: 'lg'
 }
 
