@@ -15,8 +15,8 @@ export const theme = {
     warning: '#EC8F5A'
   },
   fonts: {
-    primary: '#0A73EB',
-    secondary: '#5E6873'
+    primary: 'Roboto',
+    secondary: 'RobotoItalic'
   },
   fontSizes: {
     xs: '14px',
