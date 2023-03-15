@@ -13,6 +13,6 @@ export const sizes = ['xs', 'sm', 'md', 'lg', 'xl', 'xxl'] as const
 
 export const colors = ['primary', 'secondary', 'tertiary', 'serface', 'darkest', 'additional', 'peripheral', 'subordinate', 'backup', 'lightest', 'error', 'success', 'warning'] as const
 
-export type TSize = typeof sizes[number]
+export type TSize = typeof sizes[number] | number
 
 export type TColor = typeof colors[number]
