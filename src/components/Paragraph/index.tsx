@@ -1,6 +1,7 @@
 import { FC } from 'react'
 
 import { Wrapper } from './style'
+import { TColor, TSize } from '@/types'
 import { ParagraphProps } from './types'
 
 export const defaultProps: ParagraphProps = {
@@ -10,7 +11,7 @@ export const defaultProps: ParagraphProps = {
 }
 
 export const Paragraph: FC<ParagraphProps> = function ({ children, size, color }) {
-  return <Wrapper size={size} color={color}>{children}</Wrapper>
+  return <Wrapper size={size as TSize} color={color as TColor}>{children}</Wrapper>
 }
 
 Paragraph.defaultProps ={
