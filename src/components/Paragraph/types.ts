@@ -1,9 +1,9 @@
-import { ReactNode } from 'react'
+import { HTMLAttributes, ReactNode } from 'react'
 
 import { TSize, TColor } from '@/types'
 
-export interface ParagraphProps {
+export type ParagraphProps = HTMLAttributes<HTMLParagraphElement> & Partial<{
   children: ReactNode
-  size?: TSize
-  color?: TColor
-}
+  size: TSize
+  color: TColor
+}>

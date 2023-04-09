@@ -1,16 +1,13 @@
 import styled from '@emotion/styled'
 import { Paragraph } from '../Paragraph'
 
-import { TSize, TColor, colors } from '@/types'
+import { TSize, TColor } from '@/types'
 
-const imgSize = {
- xs: '200',
- sm: '300',
- md: '350',
- lg: '400',
- xl: '500',
- xxl: '600'
-}
+import { assosiateArrayWithSizes } from '@/utils'
+
+const imgSizeArr = [200, 300, 350, 400, 500, 600]
+
+export const imgSize = assosiateArrayWithSizes(imgSizeArr) 
 
 export const Wrapper = styled.figure<{bg: TColor}>(({bg, theme}) => ({
  display: 'flex',
@@ -29,6 +26,6 @@ export const Description = styled(Paragraph)`
 
 export const Img = styled.img<{size: TSize}>`
  object-fit: cover;
- width: ${({size}) => typeof size === 'string' ? imgSize[size] : size}px;
+ width: ${({size}) => imgSize[size]}px;
  margin: auto;
 `

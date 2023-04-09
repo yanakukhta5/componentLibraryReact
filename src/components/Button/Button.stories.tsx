@@ -1,6 +1,13 @@
-import { Button, buttonPropsDefault } from './'
+import { Button } from './'
 import { ButtonProps } from './types'
-import { colors } from '@/types'
+
+const buttonPropsDefault: ButtonProps = {
+  fullwidth: false,
+  disabled: false,
+  children: 'Кнопка',
+  color: 'lightest',
+  background: 'primary'
+}
 
 export default {
   title: 'Button',
@@ -12,8 +19,10 @@ export default {
   }
 }
 
-export const Default = (props: ButtonProps) => <Button {...props} />
+export const Default = (props: ButtonProps) => (
+  <Button {...props}>Кнопка</Button>
+)
 
 Default.storyName = 'default'
 
-Default.args = { ...buttonPropsDefault }
+Default.args = buttonPropsDefault

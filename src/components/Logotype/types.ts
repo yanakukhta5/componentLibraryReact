@@ -1,6 +1,7 @@
-import { BaseProps, TSize } from '@/types'
+import { TSize } from '@/types'
+import { HTMLAttributes } from 'react'
 
-export type LogotypeProps = BaseProps & {
+export type LogotypeProps = HTMLAttributes<HTMLDivElement> & {
   size: TSize | number
   withText: boolean
 }

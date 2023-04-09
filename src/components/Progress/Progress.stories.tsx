@@ -9,7 +9,8 @@ const baseProps: ProgressProps = {
   background: 'primary',
   radius: 10,
   value: 50,
-  description: 'Описание прогресса'
+  description: 'Описание прогресса',
+  afterColor: 'additional'
  }
 
 export default {
@@ -34,6 +35,4 @@ export const Default = (props: ProgressProps) => (
 
 Default.storyName = 'default'
 
-Default.args = {
-  ...baseProps
-}
+Default.args = baseProps

@@ -1,20 +1,8 @@
 import { FC } from 'react'
 
-import { Wrapper } from './styles'
+import { Wrapper } from './style'
 import { ButtonProps } from './types'
 
-export const buttonPropsDefault: ButtonProps = {
-  fullwidth: false,
-  disabled: false,
-  children: 'Кнопка',
-  color: 'lightest',
-  background: 'primary'
-}
-
-const Button: FC<ButtonProps> = function (props) {
+export const Button: FC<ButtonProps> = function (props) {
   return <Wrapper {...props} />
 }
-
-Button.defaultProps = buttonPropsDefault
-
-export { Button }

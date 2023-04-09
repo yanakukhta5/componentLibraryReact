@@ -1,6 +1,18 @@
 import { sizes } from '@/types'
 import { ImageProps } from './types'
-import { Image, defautPropsImage } from './'
+import { Image } from './'
+
+import { imgSize } from './style'
+
+console.log(imgSize)
+
+const defautPropsImage: ImageProps = {
+  alt: '',
+  src: '',
+  size: 'xs',
+  bg: 'backup',
+  withDescription: true
+ }
 
 export default {
   title: 'Image',

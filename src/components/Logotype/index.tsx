@@ -1,42 +1,28 @@
 import { FC, memo } from 'react'
 
 import { LogotypeProps } from './types'
-import {
-  Wrapper,
-  LogotypeTitle,
-  LogotypeSubitle,
-  LogotypeImage
-} from './style'
+import { Wrapper, LogotypeTitle, LogotypeSubitle, LogotypeImage } from './style'
 
-import { KubThemeProvider } from '@/KubThemeProvider'
-
-export const defaultProps: LogotypeProps = {
-  withText: false,
-  size: 'lg'
-}
-
-export const Logotype: FC<LogotypeProps> = memo((props) => {
+export const Logotype: FC<LogotypeProps> = ({
+  withText = false,
+  size = 'lg',
+  ...props
+}) => {
   return (
-    <KubThemeProvider>
-      <Wrapper {...props}>
-        <LogotypeImage
-          className="cui-logotype__img"
-          src="./Logotype.svg"
-          alt="Изображение логотипа сервиса Кубик"
-        />
-        <div>
-          <LogotypeTitle withText={props.withText} size={props.size}>
-            Кубик
-          </LogotypeTitle>
-          <LogotypeSubitle withText={props.withText} size={props.size}>
-            РАСПИСАНИЕ
-          </LogotypeSubitle>
-        </div>
-      </Wrapper>
-    </KubThemeProvider>
+    <Wrapper size={size} {...props}>
+      <LogotypeImage
+        className="cui-logotype__img"
+        src="./Logotype.svg"
+        alt="Изображение логотипа сервиса Кубик"
+      />
+      <div>
+        <LogotypeTitle withText={withText} size={size}>
+          Кубик
+        </LogotypeTitle>
+        <LogotypeSubitle withText={withText} size={size}>
+          РАСПИСАНИЕ
+        </LogotypeSubitle>
+      </div>
+    </Wrapper>
   )
-})
-
-Logotype.defaultProps = {
-  ...defaultProps
 }

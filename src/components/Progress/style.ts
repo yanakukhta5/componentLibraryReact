@@ -4,22 +4,35 @@ import { ProgressProps, WrapperProgressProps } from './types'
 
 export const Wrapper = styled.div<WrapperProgressProps>`
   position: relative;
-  height: ${({ height = 20 }) => height + 20}px;
+  height: ${({ height = 20 }) => height}px;
+  flex-direction: column;
+  align-items: stretch;
   &::after {
     display: block;
     position: absolute;
     left: 0;
     top: ${({ afterTop = 20 }) => afterTop}px;
-    color: ${({theme, afterColor = "primary"}) => theme.colors[afterColor]};
-    content: '${({description = ''}) => description}';
+    color: ${({ theme, afterColor = 'additional' }) =>
+      theme.colors[afterColor]};
+    content: '${({ description = '' }) => description}';
+  }
+  div {
+    height: 100%;
+  }
+`
+
+export const ProgressOverflow = styled.div<ProgressProps>`
+  --border-radius: ${({ radius = 10 }) => radius}px;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  display: flex;
+  progress {
+    width: ${({ fullwidth = false }) => (fullwidth ? '100%' : 'revert')};
+    height: 100%;
   }
 `
 
 export const Component = styled.progress<ProgressProps>`
-  --border-radius: ${({radius = 10}) => radius}px;
-  width: ${({ fullwidth = false }) => (fullwidth ? '100%' : 'revert')};
-  height: ${({ height = 20 }) => height}px;
-  overflow: hidden;
   &[value] {
     -webkit-appearance: none;
     appearance: none;
@@ -30,13 +43,8 @@ export const Component = styled.progress<ProgressProps>`
     }
     &::-webkit-progress-value {
       border-radius: var(--border-radius);
-      background-color: ${({theme, background = "primary"}) => theme.colors[background]};
+      background-color: ${({ theme, background = 'primary' }) =>
+        theme.colors[background]};
     }
-  }
-`
-
-export const ProgressOverflow = styled.div`
-  ${Component} {
-    
   }
 `

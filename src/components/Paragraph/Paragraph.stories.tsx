@@ -1,5 +1,5 @@
 import { Paragraph } from './'
-import { colors, sizes } from '@/types'
+import { sizes } from '@/types'
 import { ParagraphProps } from './types'
 
 export default {
@@ -18,6 +18,11 @@ export default {
   }
 }
 
+const defaultProps: ParagraphProps = {
+  size: 'md',
+  color: 'darkest'
+ }
+
 export const Default = ({ size, color }: ParagraphProps) => (
   <Paragraph size={size} color={color}>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nisi
@@ -27,7 +32,4 @@ export const Default = ({ size, color }: ParagraphProps) => (
   </Paragraph>
 )
 
-Default.args = {
-  size: 'md',
-  color: 'darkest'
-}
+Default.args = defaultProps

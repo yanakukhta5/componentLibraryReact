@@ -3,24 +3,16 @@ import { FC } from 'react'
 import { ImageProps } from './types'
 import { Description, Wrapper, Img } from './style'
 
-export const defautPropsImage: ImageProps = {
-  alt: '',
-  src: '',
-  size: 'xs',
-  bg: 'backup',
-  withDescription: true
-}
-
 export const Image: FC<ImageProps> = function ({
   alt,
   src,
-  size,
-  bg,
-  withDescription
+  size = 'xs',
+  bg = 'backup',
+  withDescription = true, ...props
 }) {
   return (
     <Wrapper bg={bg}>
-      <Img alt={alt} src={src} size={size} />
+      <Img alt={alt} src={src} size={size} {...props} />
       {withDescription && (
         <Description size={size} color="serface">
           {alt}
@@ -29,5 +21,3 @@ export const Image: FC<ImageProps> = function ({
     </Wrapper>
   )
 }
-
-Image.defaultProps = defautPropsImage

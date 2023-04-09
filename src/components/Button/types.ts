@@ -1,9 +1,11 @@
-import { BaseProps, TColor } from '@/types'
+import { HTMLAttributes } from 'react'
+import { TColor } from '@/types'
 
-export type ButtonProps = Partial<{
+export type ButtonProps = HTMLAttributes<HTMLButtonElement> & Partial<{
   fullwidth: boolean
   disabled: boolean
   color: TColor
   background: TColor
-}> &
-  BaseProps
+  onClick: () => void
+  type: 'reset' | 'button' | 'submit'
+}>
