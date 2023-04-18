@@ -8,6 +8,8 @@ export const Wrapper = styled.div<WrapperProgressProps>`
   flex-direction: column;
   align-items: stretch;
   &::after {
+    font-family: ${({ theme }) => theme.fonts.secondary};
+    font-size: 14px;
     display: block;
     position: absolute;
     left: 0;

@@ -1,3 +1,4 @@
+import { colors } from '@/types'
 import { Button } from './'
 import { ButtonProps } from './types'
 
@@ -15,6 +16,12 @@ export default {
   parameters: {
     controls: {
       include: Object.keys(buttonPropsDefault)
+    }
+  },
+  argTypes: {
+    color: {
+      options: Object.values(colors),
+      control: { type: 'select' }
     }
   }
 }

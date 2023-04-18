@@ -2,27 +2,28 @@ import { Success } from './'
 import { sizes } from '@/types'
 import { SuccessProps } from './types'
 
+const successPropsDefault: SuccessProps = {
+  width: 180,
+  strokeWidth: 7,
+  stroke: 'primary',
+  fill: 'lightest',
+  persent: 75,
+  duration: 0.5,
+  substrate: 'backup'
+}
+
 export default {
   title: 'Success',
   component: Success,
   parameters: {
     controls: {
-      include: ['size', 'color']
-    }
-  },
-  argTypes: {
-    size: {
-      options: Object.values(sizes),
-      control: { type: 'select' }
+      include: Object.keys(successPropsDefault)
     }
   }
 }
 
-export const Default = ({ }: SuccessProps) => (
-  <p></p>
-)
+export const Default = (props: SuccessProps) => <Success {...props} />
 
-Default.args = {
-  size: 'md',
-  color: 'darkest'
-}
+Default.storyName = 'default'
+
+Default.args = successPropsDefault

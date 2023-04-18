@@ -12,7 +12,7 @@ const defautPropsImage: ImageProps = {
   size: 'xs',
   bg: 'backup',
   withDescription: true
- }
+}
 
 export default {
   title: 'Image',
@@ -30,12 +30,10 @@ export default {
   }
 }
 
-export const Default = ( props : ImageProps) => (
-  <Image {...props} />
-)
+export const Default = (props: ImageProps) => <Image {...props} />
 
 Default.args = {
   ...defautPropsImage,
- alt: 'Подпись к изображению',
- src: '/Logotype.svg',
+  alt: 'Подпись к изображению',
+  src: '/Logotype.svg'
 }

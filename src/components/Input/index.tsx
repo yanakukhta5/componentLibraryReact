@@ -1,11 +1,7 @@
-import styled from '@emotion/styled'
+import { FC } from 'react'
+import { Component } from './style'
+import { InputProps } from './types'
 
-export const Input = styled.input`
-  width: 100%;
-  border-radius: 6px;
-  border: 1px solid ${({ theme }) => theme.colors.backup};
-  height: 100%;
-  outline: none;
-  padding: 5px 10px;
-  font-size: 16px;
-`
+export const Input : FC<InputProps> = ({borderColor = "peripheral", background = "backup", name="", ...props}) => {
+  return <Component borderColor={borderColor} name={name} {...props} />
+}

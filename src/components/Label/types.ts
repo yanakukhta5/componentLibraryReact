@@ -1,5 +1,5 @@
-import { HTMLAttributes, ReactNode } from "react";
+import { HTMLAttributes, ReactNode } from 'react'
 
 export type LabelProps = HTMLAttributes<HTMLLabelElement> & {
- htmlFor: string
+  htmlFor: string
 }

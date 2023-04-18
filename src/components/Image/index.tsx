@@ -8,7 +8,8 @@ export const Image: FC<ImageProps> = function ({
   src,
   size = 'xs',
   bg = 'backup',
-  withDescription = true, ...props
+  withDescription = true,
+  ...props
 }) {
   return (
     <Wrapper bg={bg}>

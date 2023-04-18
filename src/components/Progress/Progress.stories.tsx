@@ -11,7 +11,7 @@ const baseProps: ProgressProps = {
   value: 50,
   description: 'Описание прогресса',
   afterColor: 'additional'
- }
+}
 
 export default {
   title: 'Progress',
@@ -29,9 +29,7 @@ export default {
   }
 }
 
-export const Default = (props: ProgressProps) => (
-  <Progress {...props} />
-)
+export const Default = (props: ProgressProps) => <Progress {...props} />
 
 Default.storyName = 'default'
 

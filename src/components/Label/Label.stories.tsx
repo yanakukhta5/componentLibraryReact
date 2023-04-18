@@ -16,9 +16,7 @@ export default {
   }
 }
 
-export const Default = (props: LabelProps) => (
-  <Label {...props} />
-)
+export const Default = (props: LabelProps) => <Label {...props} />
 
 Default.storyName = 'default'
 

@@ -9,9 +9,10 @@ const loaderSizesValues: Array<number> = [20, 30, 40, 50, 60, 70]
 export const loaderSizes = assosiateArrayWithSizes(loaderSizesValues)
 
 export const Wrapper = styled.span<LoaderProps>`
-  --loader-size: ${({ size = 'md'}) => loaderSizes[size]}px;
+  --loader-size: ${({ size = 'md' }) => loaderSizes[size]}px;
   --loader-border-size: 4px;
-  --loader-border-color: ${({ theme, color = 'primary' }) => theme.colors[color]};
+  --loader-border-color: ${({ theme, color = 'primary' }) =>
+    theme.colors[color]};
   display: block;
   width: var(--loader-size);
   height: var(--loader-size);

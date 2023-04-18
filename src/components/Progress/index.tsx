@@ -8,12 +8,17 @@ export const Progress: FC<ProgressProps> = function ({
   description = '',
   height = 20,
   fullwidth = false,
-  afterColor = "backup",
+  afterColor = 'backup',
   radius = 10,
   ...props
 }) {
   return (
-    <Wrapper description={description} afterColor={afterColor} afterTop={height} height={height} >
+    <Wrapper
+      description={description}
+      afterColor={afterColor}
+      afterTop={height}
+      height={height}
+    >
       <ProgressOverflow fullwidth={fullwidth} radius={radius}>
         <Component value={value} max={100} {...props} />
       </ProgressOverflow>

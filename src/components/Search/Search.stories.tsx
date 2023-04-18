@@ -24,9 +24,7 @@ export default {
   }
 }
 
-export const Default = (props: SearchProps) => (
-  <Search {...props} />
-)
+export const Default = (props: SearchProps) => <Search {...props} />
 
 Default.storyName = 'default'
 

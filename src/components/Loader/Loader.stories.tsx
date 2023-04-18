@@ -3,9 +3,9 @@ import { LoaderProps } from './types'
 import { Loader } from './'
 
 const defautPropsLoader: LoaderProps = {
- color: 'primary',
-  size: 'md',
- }
+  color: 'primary',
+  size: 'md'
+}
 
 export default {
   title: 'Loader',
@@ -21,15 +21,13 @@ export default {
       control: { type: 'select' }
     },
     color: {
-     options: Object.values(colors),
-     control: { type: 'select' }
-   }
+      options: Object.values(colors),
+      control: { type: 'select' }
+    }
   }
 }
 
-export const Default = ( props : LoaderProps) => (
-  <Loader {...props} />
-)
+export const Default = (props: LoaderProps) => <Loader {...props} />
 
 Default.storyName = 'default'
 

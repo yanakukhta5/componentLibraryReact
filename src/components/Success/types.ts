@@ -1,10 +1,23 @@
-import { TColor } from "@/types"
+import { TColor } from '@/types'
 
-import { SingleSuccess } from './SvgSircle/types'
+import { HTMLAttributes } from 'react'
 
-export interface SuccessProps {
- data: Array<SingleSuccess>
- title: string
- withDescription: boolean
- background: TColor | 'string'
-}
+export type StyleSvgProps = Partial<{
+  width: number
+}>
+
+export type StyleCircleProps = Partial<{
+  stroke: TColor
+  fill: TColor
+  strokeWidth: number
+  r: number
+  persent: number
+  duration: number
+}>
+
+export type SuccessProps = HTMLAttributes<HTMLOrSVGElement> &
+  StyleSvgProps &
+  StyleCircleProps &
+  Partial<{
+    substrate: TColor
+  }>

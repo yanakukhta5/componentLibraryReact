@@ -10,7 +10,6 @@ module.exports = {
   staticDirs: ['../public'],
   addons: [
     '@storybook/addon-essentials',
-   // '@storybook/addon-interactions',
     '@react-theming/storybook-addon',
   ],
   framework: '@storybook/react',

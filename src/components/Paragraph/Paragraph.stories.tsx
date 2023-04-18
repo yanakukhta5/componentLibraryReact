@@ -21,7 +21,7 @@ export default {
 const defaultProps: ParagraphProps = {
   size: 'md',
   color: 'darkest'
- }
+}
 
 export const Default = ({ size, color }: ParagraphProps) => (
   <Paragraph size={size} color={color}>

@@ -16,7 +16,7 @@ export const theme = {
   },
   fonts: {
     primary: 'Roboto',
-    secondary: 'RobotoItalic'
+    secondary: 'RobotoLight'
   },
   fontSizes: {
     xs: '14px',

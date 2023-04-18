@@ -21,7 +21,7 @@ declare module '@emotion/react' {
       primary: string
       secondary: string
     }
-    fontSizes: {
+    sizes: {
       xs: string
       sm: string
       md: string

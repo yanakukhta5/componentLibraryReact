@@ -19,6 +19,7 @@ export const LogotypeTitle = styled.h1<{
   withText: boolean
   size: TSize | number
 }>(({ size = 'lg', withText = false, theme }) => ({
+  fontFamily: theme.fonts.primary,
   display: withText ? 'block' : 'none',
   fontSize: typeof size === 'number' ? size : logoSizes[size] / 2 + 'px',
   margin: 0,
@@ -30,6 +31,7 @@ export const LogotypeSubitle = styled.h2<{
   withText: boolean
   size: TSize | number
 }>(({ size = 'lg', withText = false, theme }) => ({
+  fontFamily: theme.fonts.secondary,
   display: withText ? 'block' : 'none',
   fontSize: typeof size === 'number' ? size : logoSizes[size] / 3 + 'px',
   margin: 0,

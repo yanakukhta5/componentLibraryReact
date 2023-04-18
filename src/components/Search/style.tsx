@@ -6,11 +6,12 @@ import { Input } from '../Input'
 import { SearchProps } from './types'
 
 export const Wrapper = styled.form<SearchProps>`
-  width: ${({fullwidth = false}) => fullwidth ? '100%' : 'clamp(280px, 40%, 500px)' };
+  width: ${({ fullwidth = false }) =>
+    fullwidth ? '100%' : 'clamp(280px, 40%, 500px)'};
   height: 40px;
   display: flex;
   position: relative;
-  border: 1px solid ${({theme}) => theme.colors.peripheral};
+  border: 1px solid ${({ theme }) => theme.colors.peripheral};
   border-radius: 6px;
 `
 
@@ -19,7 +20,7 @@ export const Submit = styled(Button)`
   min-width: unset;
   background-image: url('/img/svg/search.svg');
   background-repeat: no-repeat;
-  background-size: 75% 75%;
+  background-size: 55%;
   background-position: center;
   position: absolute;
   height: 100%;

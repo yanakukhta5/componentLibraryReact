@@ -11,13 +11,12 @@ export const Logotype: FC<LogotypeProps> = ({
   return (
     <Wrapper size={size} {...props}>
       <LogotypeImage
-        className="cui-logotype__img"
-        src="./Logotype.svg"
+        src="/img/Logotype.svg"
         alt="Изображение логотипа сервиса Кубик"
       />
       <div>
         <LogotypeTitle withText={withText} size={size}>
-          Кубик
+          Куб
         </LogotypeTitle>
         <LogotypeSubitle withText={withText} size={size}>
           РАСПИСАНИЕ
