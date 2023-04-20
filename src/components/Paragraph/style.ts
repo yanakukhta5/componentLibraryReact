@@ -1,10 +1,11 @@
 import styled from '@emotion/styled'
 
-import { TSize, TColor } from '@/types'
+import { ParagraphProps } from './types'
 
-export const Wrapper = styled.p<{ size: TSize; color: TColor }>(
-  ({ size = 'md', color = 'darkest', theme }) => ({
-    fontSize: theme.fontSizes[size],
-    color: theme.colors[color]
+export const Wrapper = styled.p<ParagraphProps>(
+  ({ fontSize = 16, color = 'darkest', theme }) => ({
+    fontSize: fontSize + 'px',
+    color: theme.colors[color],
+    fontFamily: theme.fonts.primary
   })
 )

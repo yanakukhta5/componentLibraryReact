@@ -5,12 +5,12 @@ import { ParagraphProps } from './types'
 
 export const Paragraph: FC<ParagraphProps> = function ({
   children,
-  size = 'md',
+  fontSize = 16,
   color = 'darkest',
   ...props
 }) {
   return (
-    <Wrapper {...props} size={size} color={color}>
+    <Wrapper {...props} fontSize={fontSize} color={color}>
       {children}
     </Wrapper>
   )

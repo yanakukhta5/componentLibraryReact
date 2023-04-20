@@ -1,30 +1,23 @@
 import { Paragraph } from './'
-import { sizes } from '@/types'
 import { ParagraphProps } from './types'
+
+const defaultParagraphProps: ParagraphProps = {
+  fontSize: 16,
+  color: 'darkest'
+}
 
 export default {
   title: 'Paragraph',
   component: Paragraph,
   parameters: {
     controls: {
-      include: ['size', 'color']
-    }
-  },
-  argTypes: {
-    size: {
-      options: Object.values(sizes),
-      control: { type: 'select' }
+      include: Object.keys(defaultParagraphProps)
     }
   }
 }
 
-const defaultProps: ParagraphProps = {
-  size: 'md',
-  color: 'darkest'
-}
-
-export const Default = ({ size, color }: ParagraphProps) => (
-  <Paragraph size={size} color={color}>
+export const Default = ({ fontSize, color }: ParagraphProps) => (
+  <Paragraph fontSize={fontSize} color={color}>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nisi
     similique ducimus labore debitis eum molestiae, voluptas sunt voluptatem
     explicabo quisquam blanditiis in sint, facere iusto est nihil quas.
@@ -32,4 +25,4 @@ export const Default = ({ size, color }: ParagraphProps) => (
   </Paragraph>
 )
 
-Default.args = defaultProps
+Default.args = defaultParagraphProps
