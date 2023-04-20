@@ -3,8 +3,7 @@ import { Input } from './'
 import { InputProps } from './types'
 
 const defautProps: InputProps = {
-  borderColor: "backup",
-  background: "peripheral"
+  borderColor: "peripheral"
 }
 
 export default {
