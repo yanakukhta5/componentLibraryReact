@@ -1,9 +1,9 @@
 import { Radio } from '.'
 import { RadioProps } from './types'
+import { useState } from 'react'
 
 const radioPropsDefault: RadioProps = {
   disabled: false,
-  checked: false,
   gap: 7,
   label: 'Радио кнопка',
   color: 'primary'
@@ -19,7 +19,10 @@ export default {
   }
 }
 
-export const Default = (props: RadioProps) => <Radio {...props} />
+export const Default = (props: RadioProps) => {
+  const [checked, setChecked] = useState(false)
+  return <Radio {...props} checked={checked} onClick={() => { setChecked(prev => !prev)}} {...props} />
+}
 
 Default.storyName = 'default'
 

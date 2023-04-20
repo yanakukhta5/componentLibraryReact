@@ -7,11 +7,13 @@ export const Radio: FC<RadioProps> = function ({
   label,
   gap,
   disabled,
+  checked,
   ...props
 }) {
+  console.log(checked)
   return (
     <Wrapper>
-      <Circle {...props} disabled={disabled} type="radio" id="checkbox" />
+      <Circle {...props} checked={checked} disabled={disabled} type="radio" id="checkbox" />
       <RadioLabel gap={gap} disabled={disabled} htmlFor="checkbox">
         {label}
       </RadioLabel>

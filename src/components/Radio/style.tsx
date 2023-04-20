@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 
-import { LabelProps } from './types'
+import { LabelProps, RadioProps } from './types'
 
 import { Input } from '../Input'
 import { Label } from '../Label'
@@ -10,9 +10,10 @@ export const Wrapper = styled.div`
   align-items: center;
 `
 
-export const Circle = styled(Input)`
+export const Circle = styled(Input)<RadioProps>`
   width: unset;
   position: absolute;
+  height: unset;
   z-index: -1;
   opacity: 0;
   &:checked + label::before {
@@ -27,9 +28,6 @@ export const Circle = styled(Input)`
     background-color: #b3d7ff;
     border-color: #b3d7ff;
   }
-  &:focus + label::before {
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-  }
   &:focus:not(:checked) + label::before {
     border-color: #80bdff;
   }
@@ -42,7 +40,7 @@ export const RadioLabel = styled(Label)<LabelProps>`
   font-family: ${({ theme }) => theme.fonts.primary};
   opacity: ${({ disabled = false }) => (disabled ? '0.6' : '1')};
   display: flex;
-  cursor: pointer;
+  cursor: ${({disabled}) => disabled ? "unset" : "pointer"};
   &::before {
     content: '';
     display: inline-block;
