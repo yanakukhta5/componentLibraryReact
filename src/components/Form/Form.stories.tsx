@@ -6,7 +6,6 @@ import { Button } from '../Button'
 
 const defautProps: FormProps = {
   borderColor: "peripheral",
-  width: 300
 }
 
 export default {
@@ -22,11 +21,11 @@ export default {
 export const Default = (props: FormProps) => <Form {...props}>
   <Label htmlFor='first'>
     First input
-  <Input id='first' name='first' />
+  <Input id='first' name='first' width={300} />
   </Label>
   <Label htmlFor='Second'>
     Second input
-  <Input id='second' name='second' />
+  <Input id='second' name='second' width={300} />
   </Label>
   <Button fullwidth={false}>Submit</Button>
 </Form>
