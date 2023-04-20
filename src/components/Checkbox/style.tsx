@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 
-import { LabelProps } from './types'
+import { LabelProps, CheckboxProps } from './types'
 
 import { Input } from '../Input'
 import { Label } from '../Label'
@@ -10,10 +10,13 @@ export const Wrapper = styled.div`
   align-items: center;
 `
 
-export const Box = styled(Input)`
+export const Box = styled(Input)<CheckboxProps>`
   width: unset;
   position: absolute;
   z-index: -1;
+  border: none;
+  height: unset;
+  outline: none;
   opacity: 0;
   &:checked + label::before {
     border-color: #0b76ef;
@@ -27,9 +30,6 @@ export const Box = styled(Input)`
     background-color: #b3d7ff;
     border-color: #b3d7ff;
   }
-  &:focus + label::before {
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-  }
   &:focus:not(:checked) + label::before {
     border-color: #80bdff;
   }
@@ -41,9 +41,9 @@ export const Box = styled(Input)`
 export const CheckboxLabel = styled(Label)<LabelProps>`
   font-family: ${({ theme }) => theme.fonts.primary};
   opacity: ${({ disabled = false }) => (disabled ? '0.6' : '1')};
-  cursor: pointer;
   align-items: baseline;
   display: flex;
+  cursor: ${({disabled}) => disabled ? "unset" : "pointer"};
   &::before {
     content: '';
     position: relative;
