@@ -35,5 +35,5 @@ export const Default = (props: ImageProps) => <Image {...props} />
 Default.args = {
   ...defautPropsImage,
   alt: 'Подпись к изображению',
-  src: '/Logotype.svg'
+  src: '/img/Logotype.svg'
 }

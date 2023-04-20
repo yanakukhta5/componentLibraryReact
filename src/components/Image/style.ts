@@ -17,7 +17,8 @@ export const Wrapper = styled.figure<{ bg: TColor }>(({ bg, theme }) => ({
   width: 'fit-content',
   backgroundColor: theme.colors[bg],
   borderRadius: '6px',
-  padding: '10px'
+  padding: '10px',
+  fontFamily: theme.fonts.secondary
 }))
 
 export const Description = styled(Paragraph)`
