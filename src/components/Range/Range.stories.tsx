@@ -4,15 +4,13 @@ import { Range } from './'
 
 const defautProps: RangeProps = {
   width: 300,
-  height: 4,
-  value: 50,
+  height: 15,
   min: 0,
   max: 100,
   color: 'serface',
-  circleSize: 22,
   circleColor: 'primary',
-  active: true,
-  fillColor: 'secondary'
+  fillColor: 'secondary',
+  disabled: false
 }
 
 export default {

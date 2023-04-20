@@ -1,16 +1,18 @@
 import { TColor } from '@/types'
 import { HTMLAttributes } from 'react'
 
-export type RangeProps = HTMLAttributes<HTMLInputElement> &
-  Partial<{
-    value: number
-    min: number
-    max: number
+export type WrapperProps = Partial<{
     width: number
     height: number
+}>
+
+export type RangeProps = HTMLAttributes<HTMLInputElement> &
+  Partial<{
+    min: number
+    max: number
     color: TColor
     circleSize: number
     circleColor: TColor
-    active: boolean
     fillColor: TColor
-  }>
+    disabled: boolean
+}> & WrapperProps
