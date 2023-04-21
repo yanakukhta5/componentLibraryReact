@@ -5,3 +5,5 @@ import { InputProps } from './types'
 export const Input : FC<InputProps> = ({borderColor = "peripheral", name="", ...props}) => {
   return <Component borderColor={borderColor} name={name} {...props} />
 }
+
+export type { InputProps }
