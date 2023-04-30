@@ -19,7 +19,7 @@ export const Circle = styled(Input)<RadioProps>`
   &:checked + label::before {
     border-color: #0b76ef;
     background-color: #0b76ef;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+    background-image: url("/img/svg/circle.svg");
   }
   &:not(:disabled):not(:checked) + label:hover::before {
     border-color: #b3d7ff;

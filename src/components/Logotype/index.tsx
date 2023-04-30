@@ -11,7 +11,7 @@ export const Logotype: FC<LogotypeProps> = ({
   return (
     <Wrapper size={size} {...props}>
       <LogotypeImage
-        src="/img/Logotype.svg"
+        src="/img/svg/Logotype.svg"
         alt="Изображение логотипа сервиса Кубик"
       />
       <div>
