@@ -1,5 +1,4 @@
 import { Success } from './'
-import { sizes } from '@/types'
 import { SuccessProps } from './types'
 
 const successPropsDefault: SuccessProps = {

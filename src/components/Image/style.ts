@@ -3,6 +3,8 @@ import { Paragraph } from '../Paragraph'
 
 import { TSize, TColor } from '@/types'
 
+import { DescriptionProps } from "./types";
+
 import { assosiateArrayWithSizes } from '@/utils'
 
 const imgSizeArr = [200, 300, 350, 400, 500, 600]
@@ -21,7 +23,7 @@ export const Wrapper = styled.figure<{ bg: TColor }>(({ bg, theme }) => ({
   fontFamily: theme.fonts.secondary
 }))
 
-export const Description = styled(Paragraph)`
+export const Description = styled(Paragraph)<DescriptionProps>`
   text-align: center;
 `.withComponent('figcaption')
 
