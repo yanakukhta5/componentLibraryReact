@@ -2,8 +2,6 @@ import styled from '@emotion/styled'
 
 import { Input } from '../Input'
 
-import { assosiateArrayWithSizes } from '@/utils'
-
 import { RangeProps, WrapperProps } from './types'
 
 export const Component = styled(Input)<RangeProps>`

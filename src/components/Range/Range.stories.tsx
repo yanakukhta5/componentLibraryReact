@@ -1,6 +1,7 @@
-import { sizes, colors } from '@/types'
+import { colors } from '@/types'
 import { RangeProps } from './types'
 import { Range } from './'
+import { useState } from 'react'
 
 const defautProps: RangeProps = {
   width: 300,
@@ -22,10 +23,6 @@ export default {
     }
   },
   argTypes: {
-    size: {
-      options: Object.values(sizes),
-      control: { type: 'select' }
-    },
     color: {
       options: Object.values(colors),
       control: { type: 'select' }
@@ -35,9 +32,12 @@ export default {
       control: { type: 'select' }
     }
   }
-}
+  }
 
-export const Default = (props: RangeProps) => <Range {...props} />
+export const Default = (props: RangeProps) =>{
+ const [value, setValue] = useState(50)
+ return <Range value={value} {...props} onInput={(event) => setValue(+(event?.target as HTMLInputElement).value) } />
+}
 
 Default.storyName = 'default'
 

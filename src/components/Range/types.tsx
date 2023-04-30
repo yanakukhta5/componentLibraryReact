@@ -15,4 +15,5 @@ export type RangeProps = HTMLAttributes<HTMLInputElement> &
     circleColor: TColor
     fillColor: TColor
     disabled: boolean
+    value: number
 }> & WrapperProps
