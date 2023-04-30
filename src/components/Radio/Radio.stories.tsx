@@ -1,3 +1,4 @@
+import { colors } from '@/types'
 import { Radio } from '.'
 import { RadioProps } from './types'
 import { useState } from 'react'
@@ -6,7 +7,7 @@ const radioPropsDefault: RadioProps = {
   disabled: false,
   gap: 7,
   label: 'Радио кнопка',
-  color: 'primary'
+  color: "primary"
 }
 
 export default {
@@ -15,6 +16,12 @@ export default {
   parameters: {
     controls: {
       include: Object.keys(radioPropsDefault)
+    }
+  },
+  argTypes: {
+    color: {
+      options: Object.values(colors),
+      control: { type: 'select' }
     }
   }
 }

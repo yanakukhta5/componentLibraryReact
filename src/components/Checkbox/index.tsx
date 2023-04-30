@@ -8,12 +8,12 @@ export const Checkbox: FC<CheckboxProps> = function ({
   gap,
   disabled,
   checked = true,
+  color = "primary",
   ...props
 }) {
-  console.log(checked)
   return (
     <Wrapper>
-      <Box {...props} checked={checked} disabled={disabled} type="checkbox" id="checkbox" />
+      <Box {...props} color={color} checked={checked} disabled={disabled} type="checkbox" id="checkbox" />
       <CheckboxLabel gap={gap} disabled={disabled} htmlFor="checkbox">
         {label}
       </CheckboxLabel>

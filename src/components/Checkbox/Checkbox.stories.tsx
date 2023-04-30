@@ -1,3 +1,4 @@
+import { colors } from '@/types'
 import { Checkbox } from '.'
 import { CheckboxProps } from './types'
 import { useState } from 'react'
@@ -15,6 +16,12 @@ export default {
   parameters: {
     controls: {
       include: Object.keys(checkboxPropsDefault)
+    }
+  },
+  argTypes: {
+    color: {
+      options: Object.values(colors),
+      control: { type: 'select' }
     }
   }
 }

@@ -19,19 +19,12 @@ export const Box = styled(Input)<CheckboxProps>`
   outline: none;
   opacity: 0;
   &:checked + label::before {
-    border-color: #0b76ef;
-    background-color: #0b76ef;
+    border-color: ${({theme, color = "primary"}) => theme.colors[color]};
+    background-color: ${({theme, color = "primary"}) => theme.colors[color]};
     background-image: url("/img/svg/checkMark.svg");
   }
   &:not(:disabled):not(:checked) + label:hover::before {
-    border-color: #b3d7ff;
-  }
-  &:not(:disabled):active + label::before {
-    background-color: #b3d7ff;
-    border-color: #b3d7ff;
-  }
-  &:focus:not(:checked) + label::before {
-    border-color: #80bdff;
+    border-color: ${({theme, color = "primary"}) => theme.colors[color]};
   }
   &:disabled + label::before {
     background-color: #e9ecef;
