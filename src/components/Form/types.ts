@@ -4,4 +4,6 @@ import { HTMLAttributes } from "react"
 export type FormProps = HTMLAttributes<HTMLFormElement> & Partial<{
  borderColor: TColor
  width: number
+ method: string
+ action: string
 }>
